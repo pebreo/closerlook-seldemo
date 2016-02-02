@@ -4,7 +4,7 @@ sudo: required
 python:
   - "2.7"
 install:
-  - sudo apt-get -qq install xvfb python-virtualenv chromium-browser
+  - sudo apt-get -qq install xvfb chromium-browser
 before_script:
   - ./setup_travis.sh
   - cd tests

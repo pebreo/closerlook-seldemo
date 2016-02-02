@@ -10,5 +10,5 @@ before_script:
   - cd tests
 script:  ./run_selenium_tests.sh
 env:
-  - BROWSER="Chrome"
+  #- BROWSER="Chrome"
   - BROWSER="Firefox"

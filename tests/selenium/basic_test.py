@@ -51,7 +51,7 @@ class TestCloserlook(BaseTestCase):
         """ Expect no search results when given a nonsense search term """
         self.driver.get('http://closerlook.com')
         self.driver.find_element_by_id('menu-search').click()
-        self.driver.find_element_by_id('username').send_keys('thissearchtermwillnotbefound')
+        self.driver.find_element_by_id('txtWord').send_keys('thissearchtermwillnotbefound')
         self.driver.save_screenshot('noresultsfound_result.png')
         assert 'No results were found.' in self.driver.page_source
 
@@ -60,7 +60,7 @@ class TestCloserlook(BaseTestCase):
         """ Expect redirect to mainpaige when given a blank search term """
         self.driver.get('http://closerlook.com')
         self.driver.find_element_by_id('menu-search').click()
-        self.driver.find_element_by_id('username').send_keys('')
+        self.driver.find_element_by_id('txtWord').send_keys('')
         self.driver.save_screenshot('redirect_result.png')
         assert 'Required' in self.driver.page_source
 
